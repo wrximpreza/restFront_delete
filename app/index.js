@@ -6,7 +6,9 @@ const Router = require("koa-router");
 const bodyParser = require('koa-bodyparser');
 const router = new Router();
 const usersModel = require('./models/users');
+const serve = require("koa-static");
 const config = require("config");
+
 
 /**
  * @example curl -v -X GET "http://127.0.0.1:3000/users"
@@ -68,6 +70,7 @@ app.use(async(ctx, next) => {
         ctx.status = 500;
     }
 });
+app.use(require("koa-convert")(serve('./app/public')));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
