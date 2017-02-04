@@ -28,6 +28,7 @@ router.get("/users/:id", async(ctx, next) => {
  * @example curl -v -X POST "http://127.0.0.1:3000/users" -d '{"name": "Vasya"}' -H "Content-Type: application/json"
  */
 router.post('/users', bodyParser(), async(ctx, next) => {
+    console.log(ctx.request.body);
     let userId = await usersModel.add(ctx.request.body);
     if (typeof userId === 'number') {
         ctx.status = 201;

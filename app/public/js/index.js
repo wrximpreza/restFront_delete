@@ -1,10 +1,8 @@
 "use strict";
 
 function initialize(){
-    console.log("hello world1");
-
-    require('./components/form')();
-    require('./components/table')();
+    let load = require('./components/table');
+    load.init();
 }
 
 initialize();

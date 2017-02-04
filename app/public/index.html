@@ -14,7 +14,7 @@
     <hr>
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            <form action="" class="form-horizontal">
+            <form action="" name="add" class="form-horizontal">
                 <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">Имя</label>
                     <input type="text" id="name" name="name" placeholder="Например, Вася"
@@ -30,6 +30,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12">
+
             <table class="table table-hover">
                 <thead>
                 <tr>
@@ -39,27 +40,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Вася</td>
-                    <td>
-                        <form action="" class="form-inline">
-                            <div class="form-group">
-                                <label for="updateName" class="sr-only">
-                                    Имя
-                                </label>
-                                <input class="form-control" type="text" id="updateName" value="Вася">
-                            </div>
-                            &nbsp;
-                            <button type="submit" class="btn btn-primary">Изменить</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Петя</td>
-                    <td><a href="#delete">Удалить</a> | <a href="#update">Изменить</a></td>
-                </tr>
+
                 </tbody>
             </table>
         </div>
